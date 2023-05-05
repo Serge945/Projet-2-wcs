@@ -36,9 +36,9 @@ function Navbar() {
               </Link>
             </figure>
             <figure>
-              <Link to="/Path">
+              <Link to="/Path/Starter">
                 <img src={pokeball} alt="pokeball" />
-                <figcaption>Team</figcaption>
+                <figcaption>Favourites</figcaption>
               </Link>
             </figure>
             <figure>
@@ -82,9 +82,9 @@ function Navbar() {
               </Link>
             </figure>
             <figure>
-              <Link to="/Path">
+              <Link to="/Path/Starter">
                 <img src={pokeball} alt="pokeball" />
-                <figcaption>Team</figcaption>
+                <figcaption>Favorites</figcaption>
               </Link>
             </figure>
             <figure>

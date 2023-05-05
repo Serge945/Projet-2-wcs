@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import colors from "./colors";
 import TagType from "./TagType";
@@ -11,14 +12,16 @@ function PokedexCard({ pokemon }) {
           <div className="vertical-line">
             <span className="dot" />
           </div>
-          <div className="cardPokedex">
-            <img
-              className="imgPokedex"
-              style={{ backgroundColor: colors[pokemon.type[0].type.name] }}
-              src={pokemon.image}
-              alt="pokemon"
-            />
-          </div>
+          <Link to="/Path/stats">
+            <div className="cardPokedex">
+              <img
+                className="imgPokedex"
+                style={{ backgroundColor: colors[pokemon.type[0].type.name] }}
+                src={pokemon.image}
+                alt="pokemon"
+              />
+            </div>
+          </Link>
           <ul className="ulPokedex">
             <li className="liPokedex">
               #{pokemon.id?.toString().padStart(3, "0")}

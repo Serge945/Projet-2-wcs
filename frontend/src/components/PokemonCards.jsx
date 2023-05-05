@@ -4,6 +4,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import getColorsByType from "./getColorsByType";
+import fondpokekeball from "../assets/icon/fondpokeball.png";
 
 function PokemonCards({ pokemon, onClick }) {
   return (
@@ -16,11 +17,7 @@ function PokemonCards({ pokemon, onClick }) {
           backgroundColor: getColorsByType(pokemon.type[0].type.name),
         }}
       >
-        <img
-          className="pokeball"
-          src="./src/assets/icon/fondpokeball.png"
-          alt="pokeball"
-        />
+        <img className="pokeball" src={fondpokekeball} alt="pokeball" />
         <div className="pokemon-card-top">
           <h2 className="PokeCardName">{pokemon.name}</h2>
           <img

@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import Stats from "@components/Stats";
 import Starter from "./components/Starter";
 import Login from "./components/Login";
 import Path from "./components/Path";
@@ -7,11 +9,10 @@ import GameOver from "./components/GameOver";
 import Pokedex from "./components/Pokedex";
 import PokemonGuesser from "./components/PokemonGuesser";
 import Pokemon from "./Classes/Pokemon";
+// import Stats from "./components/Stats";
 
 import "./App.scss";
 // import "./App.css";
-
-console.info(Starter);
 
 function App() {
   const [pokemonsArray, setPokemonsArray] = useState([]);
@@ -19,7 +20,7 @@ function App() {
   const [pokemonWon, setPokemonWon] = useState([]);
   const [score, setScore] = useState(0);
 
-  console.info(pokemonsArray);
+  // console.info(pokemonsArray);
   // const [pokemonTeam, setPokemonTeam] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -101,6 +102,10 @@ function App() {
       <Route
         path="/Path/Starter"
         element={<Starter pokemonsArray={pokemonsArray} />}
+      />
+      <Route
+        path="/Path/stats/:pokemonName"
+        element={<Stats pokemons={pokemonsArray} />}
       />
     </Routes>
   );
