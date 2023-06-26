@@ -52,7 +52,6 @@ function PokedexCard({ pokemon }) {
           </ul>
         </div>
       )}
-      ;
     </div>
   );
 }

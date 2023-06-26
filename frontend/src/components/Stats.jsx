@@ -154,7 +154,9 @@ function Stats({ pokemons }) {
               </h2>
               <div className="jg">
                 <p>
-                  <span>{pokemon?.stats[0]?.stat.name}</span>{" "}
+                  <span className="statName">
+                    {pokemon?.stats[0]?.stat.name}
+                  </span>{" "}
                   <span className="span-1">{pokemon?.stats[0]?.base_stat}</span>
                 </p>
 
@@ -163,21 +165,26 @@ function Stats({ pokemons }) {
 
               <div className="jg-1">
                 <p>
-                  <span>{pokemon.stats[1].stat.name}</span>
+                  <span className="statName">{pokemon.stats[1].stat.name}</span>
                   <span className="span-2"> {pokemon.stats[1].base_stat}</span>
                 </p>
                 <p className="jauge-2" />
               </div>
               <div className="jg-2">
                 <p>
-                  <span> {pokemon.stats[2].stat.name} </span>
+                  <span className="statName">
+                    {" "}
+                    {pokemon.stats[2].stat.name}{" "}
+                  </span>
                   <span className="span-3">{pokemon.stats[2].base_stat}</span>
                 </p>
                 <p className="jauge-3" />
               </div>
               <div className="jg-3">
                 <p>
-                  <span>{pokemon.stats[5].stat.name} </span>
+                  <span className="statName">
+                    {pokemon.stats[5].stat.name}{" "}
+                  </span>
                   <span className="span-4">{pokemon.stats[5].base_stat}</span>
                 </p>
                 <p className="jauge-4" />
